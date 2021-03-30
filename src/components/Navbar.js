@@ -28,7 +28,7 @@ export default function NavBar() {
         <Toolbar>
           
           <Typography variant="h6" className={classes.title}>
-            News
+            Open Mic
           </Typography>
           <Button color="inherit">Login</Button>
         </Toolbar>
