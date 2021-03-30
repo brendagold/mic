@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import TextField from "@material-ui/core/TextField";
 import { makeStyles } from "@material-ui/core/styles";
 import { Button, Container, Typography } from "@material-ui/core";
+import { useHistory } from 'react-router-dom';
 
 const useStyles = makeStyles((theme) => ({
   field: {
@@ -12,6 +13,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const MicInput = () => {
+  let history = useHistory();
   const classes = useStyles();
   const [pin, setPin] = useState(0);
   const [pinError, setPinError] = useState(false);
@@ -27,6 +29,7 @@ const MicInput = () => {
 
     if (pin) {
       console.log(pin);
+      history.push('/micdetails');
     }
   };
   return (
@@ -57,7 +60,7 @@ const MicInput = () => {
           color="secondary"
           type="submit"
         >
-          OPen MIc
+          Open Mic
         </Button>
       </form>
     </Container>
