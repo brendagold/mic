@@ -12,8 +12,8 @@ import Typography from "@material-ui/core/Typography";
 const useStyles = makeStyles((theme) => ({
   root: {
     width: "100%",
-    maxWidth: "36ch",
-    marginTop: 30,
+    maxWidth: "",
+    marginTop: 20,
     backgroundColor: theme.palette.background.paper,
   },
   inline: {
@@ -29,11 +29,11 @@ const MicDetails = () => {
   const classes = useStyles();
   return (
     <Container>
-        <Typography variant="h5"> Open Mic Title</Typography>
-        <Typography>123 Plain New York</Typography>
-        <Typography>12th April 2021, 14:45pm</Typography>
+        <Typography variant="h5" color="textSecondary"> Open Mic Title</Typography>
+        <Typography color="textSecondary">123 Plain New York</Typography>
+        <Typography color="textSecondary">12th April 2021, 14:45pm</Typography>
       <List className={classes.root}>
-      <Divider variant="inset" component="li" />
+     
         <ListItem alignItems="flex-start" className={classes.list}>
           <ListItemAvatar>
             <Avatar alt="Remy Sharp" src="/images/record.png" />
