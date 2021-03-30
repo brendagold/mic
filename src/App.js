@@ -1,23 +1,23 @@
-import logo from './logo.svg';
+
 import './App.css';
+import { Route, Switch } from 'react-router-dom';
+import MicInput from './components/MicInput';
+import NavBar from './components/Navbar';
+import MicDetails from './components/MicDetails';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <NavBar />
+      <Switch>
+        <Route exact path="/">
+          <MicInput />
+        </Route>
+        <Route path="/micdetails">
+         <MicDetails />
+        </Route>
+      </Switch>
+      
     </div>
   );
 }
