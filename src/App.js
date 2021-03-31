@@ -8,7 +8,7 @@ import MicDetails from './components/MicDetails';
 function App() {
   return (
     <div className="App">
-      <NavBar />
+      
       <Switch>
         <Route exact path="/">
           <MicInput />
