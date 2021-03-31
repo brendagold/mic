@@ -1,13 +1,10 @@
-import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography';
-import Button from '@material-ui/core/Button';
-import { Link } from 'react-router-dom';
-
-
-
+import React from "react";
+import { makeStyles } from "@material-ui/core/styles";
+import AppBar from "@material-ui/core/AppBar";
+import Toolbar from "@material-ui/core/Toolbar";
+import Typography from "@material-ui/core/Typography";
+import Button from "@material-ui/core/Button";
+import { Link } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -17,10 +14,15 @@ const useStyles = makeStyles((theme) => ({
     marginRight: theme.spacing(2),
   },
   title: {
-      textDecoration: 'none',
-      color: 'white',
+    textDecoration: "none",
+    color: "white",
     flexGrow: 1,
   },
+  logo: {
+    maxWidth: 60,
+    marginTop: 10,
+    marginRight: '10px'
+  }
 }));
 
 export default function NavBar() {
@@ -28,12 +30,12 @@ export default function NavBar() {
 
   return (
     <div className={classes.root}>
-      <AppBar position="static" color="secondary">
+      <AppBar position="static" color="transparent" elevation={0}>
         <Toolbar>
-          
-          <Typography variant="h6" className={classes.title}>
-            <Link to="/" className={classes.title} >Open Mic</Link>
-          </Typography>
+          <Link to="/" className={classes.title}>
+            <img src="/images/logo.png" alt="litmic" className={classes.logo} />
+          </Link>
+
           <Button color="inherit">Login</Button>
         </Toolbar>
       </AppBar>
