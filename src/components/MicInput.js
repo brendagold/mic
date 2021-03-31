@@ -1,8 +1,11 @@
 import React, { useState } from "react";
+import AppBar from "@material-ui/core/AppBar";
+import Toolbar from "@material-ui/core/Toolbar";
 import TextField from "@material-ui/core/TextField";
 import { makeStyles } from "@material-ui/core/styles";
 import { Button, Container, Typography } from "@material-ui/core";
 import { useHistory } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -13,7 +16,21 @@ const useStyles = makeStyles((theme) => ({
   },
 
   contain: {
-    marginTop: 40
+    marginTop: 90
+  },
+  logo: {
+   
+    margin: 'auto',
+    textAlign: 'center',
+    maxWidth: '50%',
+    maxHeight: '70%',
+    
+  },
+  logoCenter: {
+    position: 'absolute', 
+    left: '55%', 
+    top: '8%',
+    transform: 'translate(-50%, -50%)'
   }
 }));
 
@@ -39,6 +56,13 @@ const MicInput = () => {
   };
   return (
     <>
+     <AppBar position="static" color="transparent" elevation={0}>
+        <Toolbar className={classes.logoCenter} >
+          <Link to="/" className={classes.title}>
+            <img src="/images/logo.png" alt="litmic" className={classes.logo} />
+          </Link>
+        </Toolbar>
+      </AppBar>
     
     <Container className={classes.contain}>
       <Typography
