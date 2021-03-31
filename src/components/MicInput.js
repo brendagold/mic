@@ -43,7 +43,7 @@ const MicInput = () => {
         color="textSecondary"
         component="h2"
         gutterBottom
-       
+        align='center'
       >
         Open Mic PIN
       </Typography>
