@@ -8,6 +8,7 @@ import ListItemText from "@material-ui/core/ListItemText";
 import ListItemAvatar from "@material-ui/core/ListItemAvatar";
 import Avatar from "@material-ui/core/Avatar";
 import Typography from "@material-ui/core/Typography";
+import NavBar from "./Navbar";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -31,6 +32,8 @@ const useStyles = makeStyles((theme) => ({
 const MicDetails = () => {
   const classes = useStyles();
   return (
+      <>
+      <NavBar />
     <Container className={classes.contain}>
         <Typography variant="h5" color="textSecondary"> Open Mic Title</Typography>
         <Typography color="textSecondary">123 Plain New York</Typography>
@@ -122,6 +125,7 @@ const MicDetails = () => {
         </ListItem>
       </List>
     </Container>
+    </>
   );
 };
 

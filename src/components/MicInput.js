@@ -4,6 +4,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import { Button, Container, Typography } from "@material-ui/core";
 import { useHistory } from 'react-router-dom';
 
+
 const useStyles = makeStyles((theme) => ({
   field: {
     marginTop: 20,
@@ -37,6 +38,8 @@ const MicInput = () => {
     }
   };
   return (
+    <>
+    
     <Container className={classes.contain}>
       <Typography
         variant="h5"
@@ -69,6 +72,7 @@ const MicInput = () => {
         </Button>
       </form>
     </Container>
+    </>
   );
 };
 
