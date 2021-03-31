@@ -22,16 +22,21 @@ const useStyles = makeStyles((theme) => ({
   list: {
       backgroundColor: '#fafafa',
       marginBottom: 3
+  },
+  contain: {
+    marginTop: 40
   }
 }));
 
 const MicDetails = () => {
   const classes = useStyles();
   return (
-    <Container>
+    <Container className={classes.contain}>
         <Typography variant="h5" color="textSecondary"> Open Mic Title</Typography>
         <Typography color="textSecondary">123 Plain New York</Typography>
-        <Typography color="textSecondary">12th April 2021, 14:45pm</Typography>
+        <Typography color="textSecondary" gutterBottom>12th April 2021, 14:45pm</Typography>
+
+        <Typography variant="h5" color="textSecondary" align='center'> Performers</Typography>
       <List className={classes.root}>
      
         <ListItem alignItems="flex-start" className={classes.list}>

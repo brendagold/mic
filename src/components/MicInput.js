@@ -10,6 +10,10 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: 20,
     display: "block",
   },
+
+  contain: {
+    marginTop: 40
+  }
 }));
 
 const MicInput = () => {
@@ -33,7 +37,7 @@ const MicInput = () => {
     }
   };
   return (
-    <Container>
+    <Container className={classes.contain}>
       <Typography
         variant="h5"
         color="textSecondary"
@@ -59,6 +63,7 @@ const MicInput = () => {
           variant="contained"
           color="secondary"
           type="submit"
+          fullWidth
         >
           Open Mic
         </Button>

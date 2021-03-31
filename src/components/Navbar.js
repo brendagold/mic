@@ -4,6 +4,8 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
+import { Link } from 'react-router-dom';
+
 
 
 
@@ -15,6 +17,8 @@ const useStyles = makeStyles((theme) => ({
     marginRight: theme.spacing(2),
   },
   title: {
+      textDecoration: 'none',
+      color: 'white',
     flexGrow: 1,
   },
 }));
@@ -28,7 +32,7 @@ export default function NavBar() {
         <Toolbar>
           
           <Typography variant="h6" className={classes.title}>
-            <Link to="/">Open Mic</Link>
+            <Link to="/" className={classes.title} >Open Mic</Link>
           </Typography>
           <Button color="inherit">Login</Button>
         </Toolbar>
