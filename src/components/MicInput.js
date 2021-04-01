@@ -43,6 +43,9 @@ const useStyles = makeStyles((theme) => ({
     left: '', 
     top: '80%',
     width: '90%'
+  }, 
+  mt: {
+    marginTop: 20
   }
 }));
 
@@ -75,7 +78,7 @@ const MicInput = () => {
           </Link>
         </Toolbar>
       </AppBar>
-    <Divider />
+    <Divider className={classes.mt} />
     <Container className={classes.containn}>
       <Typography
         variant="h5"
