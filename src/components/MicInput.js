@@ -3,7 +3,7 @@ import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import TextField from "@material-ui/core/TextField";
 import { makeStyles } from "@material-ui/core/styles";
-import { Button, Container, Typography } from "@material-ui/core";
+import { Button, Container, Divider, Typography } from "@material-ui/core";
 import { useHistory } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 
@@ -18,6 +18,11 @@ const useStyles = makeStyles((theme) => ({
   contain: {
     marginTop: 90
   },
+
+  containn: {
+    marginTop: 30
+  },
+ 
   logo: {
    
     margin: 'auto',
@@ -63,15 +68,15 @@ const MicInput = () => {
   };
   return (
     <>
-     <AppBar position="static" color="transparent" >
+     <AppBar position="static" color="primary" className={classes.contain} >
         <Toolbar className={classes.logoCenter} >
           <Link to="/">
             <img src="/images/logo.png" alt="litmic" className={classes.logo} />
           </Link>
         </Toolbar>
       </AppBar>
-    
-    <Container className={classes.contain}>
+    <Divider />
+    <Container className={classes.containn}>
       <Typography
         variant="h5"
         color="textSecondary"
