@@ -31,6 +31,13 @@ const useStyles = makeStyles((theme) => ({
     left: '55%', 
     top: '8%',
     transform: 'translate(-50%, -50%)'
+  }, 
+
+  end: {
+    position: 'absolute', 
+    left: '', 
+    top: '80%',
+    width: '90%'
   }
 }));
 
@@ -90,7 +97,8 @@ const MicInput = () => {
           variant="contained"
           color="secondary"
           type="submit"
-          fullWidth
+          
+          className={classes.end}
         >
           Open Mic
         </Button>
