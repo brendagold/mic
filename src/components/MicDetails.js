@@ -26,6 +26,9 @@ const useStyles = makeStyles((theme) => ({
   },
   contain: {
     marginTop: 40
+  },
+  spacee: {
+    marginTop: 20
   }
 }));
 
@@ -35,11 +38,14 @@ const MicDetails = () => {
       <>
       <NavBar />
     <Container className={classes.contain}>
-        <Typography variant="h5" color="textSecondary"> Open Mic Title</Typography>
-        <Typography color="textSecondary">123 Plain New York</Typography>
-        <Typography color="textSecondary" gutterBottom>12th April 2021, 14:45pm</Typography>
+        <div>
+        <Typography variant="h5" color="textSecondary" align='center'> Open Mic Title</Typography>
+        <Typography color="textSecondary" align='center'>123 Plain New York</Typography>
+        <Typography color="textSecondary" gutterBottom align='center'>12th April 2021, 14:45pm</Typography>
+        </div>
+        <Divider  />
 
-        <Typography variant="h5" color="textSecondary" align='center'> Performers</Typography>
+        <Typography variant="h5" color="textSecondary" align='center' className={classes.spacee}> Performers</Typography>
       <List className={classes.root}>
      
         <ListItem alignItems="flex-start" className={classes.list}>
