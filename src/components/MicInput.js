@@ -16,11 +16,13 @@ const useStyles = makeStyles((theme) => ({
   },
 
   contain: {
-    marginTop: 90
+    marginTop: 90,
+    backgroundColor: "pink",
   },
 
   containn: {
-    marginTop: 30
+    marginTop: 30,
+   
   },
  
   logo: {
@@ -73,9 +75,11 @@ const MicInput = () => {
     <>
      <AppBar position="static" color="primary" className={classes.contain} >
         <Toolbar className={classes.logoCenter} >
-          <Link to="/">
+          <Link to="/" style={{textDecoration: 'none'}}>
             <img src="/images/logo.png" alt="litmic" className={classes.logo} />
+            <Typography variant='h5' color='textSecondary'>Lit Mic</Typography>
           </Link>
+          
         </Toolbar>
       </AppBar>
     <Divider className={classes.mt} />
