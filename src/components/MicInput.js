@@ -73,7 +73,7 @@ const MicInput = () => {
   };
   return (
     <>
-     <AppBar position="static" color="primary" className={classes.contain} >
+     <AppBar position="static" className={classes.contain} >
         <Toolbar className={classes.logoCenter} >
           <Link to="/" style={{textDecoration: 'none'}}>
             <img src="/images/logo.png" alt="litmic" className={classes.logo} />
